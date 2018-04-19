@@ -1,10 +1,10 @@
 <template>
     <div class="app-container">
-        <span>code</span>
+        <span>code1111</span>
     </div>
 </template>
 <script>
     export default {
-        name :'code'
+        name :'codeDemo'
     }
 </script>

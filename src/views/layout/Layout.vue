@@ -20,6 +20,7 @@
             </div>
             <!-- 右侧主内容区 -->
             <div class="main-right">
+
                 <app-main></app-main>
             </div>
         </main>
@@ -72,12 +73,14 @@
 			};
         },
         created(){
-            console.log( this.$route,this.$route.meta.activeItem);
+            console.log(this.$router.options.routes);
+            // console.log( this.$route,this.$route.meta.activeItem);
 
         },
 		components: {
-            Siderbar,
-            AppMain
+            'siderbar':Siderbar,
+            'app-main':AppMain
+
         },
 		methods: {},
 		watch: {
@@ -96,9 +99,11 @@
 		z-index: 1000;
 		min-width: 1200px;
 		transition: all 0.5s ease;
-		border-top: solid 4px #3091f2;
+		/* border-top: solid 4px #3091f2; */
+		border-top: solid 4px #e64c65;
 		background-color: #fff;
-		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+
 	}
 
 	header.header-fixed {
@@ -122,6 +127,9 @@
         height:100%;
         padding:0 20px;
     }
+    header .el-menu--horizontal>.el-menu-item.is-active{
+        border-color:#e64c65;
+    }
 	/* 主内容区 */
 	main {
 		display: -webkit-box;
@@ -136,6 +144,8 @@
         text-align: center;
         width: 200px;
         float: left;
+        background-color:#fafafa;
+        border-right:1px solid #e1e6eb;
 	}
 
 	main .main-right {
@@ -143,7 +153,7 @@
         -ms-flex: 1;
         flex: 1;
         background-color: #fff;
-        padding: 50px 70px;
+        padding: 20px;
 	}
 
 	main .el-menu {

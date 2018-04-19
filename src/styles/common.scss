@@ -1,0 +1,303 @@
+/*
+    公共css
+*/
+body{
+    color:#333;
+    font-size: 14px;
+     line-height:14px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif,'微软雅黑';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.clearfix:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+.clearfix{
+    zoom:1;
+}
+.fl {
+    float:left;
+    display:inline;
+}
+.fr {
+    float:right;
+    display:inline;
+}
+
+ul{
+    list-style: none;
+}
+
+//内间距
+.padding-0 { padding: 0; }
+.padding-xxs { padding: 5px; }
+.padding-xs { padding: 10px; }
+.padding-sm { padding: 20px; }
+.padding-md { padding: 30px; }
+.padding-lg { padding: 40px; }
+.padding-xl { padding: 50px; }
+.padding-xxl { padding: 60px; }
+
+//内间距-上边距
+.padding-0-t { padding-top: 0; }
+.padding-xxs-t { padding-top: 5px; }
+.padding-xs-t { padding-top: 10px; }
+.padding-sm-t { padding-top: 20px; }
+.padding-md-t { padding-top: 30px; }
+.padding-lg-t { padding-top: 40px; }
+.padding-xl-t { padding-top: 50px; }
+.padding-xxl-t { padding-top: 60px; }
+
+//内间距-右边距
+.padding-0-r { padding-right: 0; }
+.padding-xxs-r { padding-right: 5px; }
+.padding-xs-r { padding-right: 10px; }
+.padding-sm-r { padding-right: 20px; }
+.padding-md-r { padding-right: 30px; }
+.padding-lg-r { padding-right: 40px; }
+.padding-xl-r { padding-right: 50px; }
+.padding-xxl-r { padding-right: 60px; }
+
+//内间距
+.padding-0-b { padding-bottom: 0; }
+.padding-xxs-b {  padding-bottom: 5px; }
+.padding-xs-b {  padding-bottom: 10px; }
+.padding-sm-b {  padding-bottom: 20px; }
+.padding-md-b {  padding-bottom: 30px; }
+.padding-lg-b {  padding-bottom: 40px; }
+.padding-xl-b {  padding-bottom: 50px; }
+.padding-xxl-b {  padding-bottom: 60px; }
+
+//内间距
+.padding-0-l { padding-left: 0; }
+.padding-xxs-l { padding-left: 5px; }
+.padding-xs-l { padding-left: 10px; }
+.padding-sm-l { padding-left: 20px; }
+.padding-md-l { padding-left: 30px; }
+.padding-lg-l { padding-left: 40px; }
+.padding-xl-l { padding-left: 50px; }
+.padding-xxl-l { padding-left: 60px; }
+
+
+
+
+
+
+//外间距
+.margin-0 { margin: 0; }
+.margin-xxs { margin: 5px; }
+.margin-xs { margin: 10px; }
+.marign-sm { margin: 20px; }
+.margin-md { margin: 30px; }
+.margin-lg { margin: 40px; }
+.margin-xl { margin: 50px; }
+.margin-xxl { margin: 60px; }
+
+//外间距的上边距
+.margin-0-t { margin-top: 0; }
+.margin-xxs-t { margin-top: 5px; }
+.margin-xs-t { margin-top: 10px; }
+.marign-sm-t { margin-top: 20px; }
+.margin-md-t { margin-top: 30px; }
+.margin-lg-t { margin-top: 40px; }
+.margin-xl-t { margin-top: 50px; }
+.margin-xxl-t { margin-top: 60px; }
+
+//外间距的右边距
+.margin-0-r { margin-right: 0; }
+.margin-xxs-r {margin-right: 5px; }
+.margin-xs-r { margin-right: 10px; }
+.marign-sm-r { margin-right: 20px; }
+.margin-md-r { margin-right: 30px; }
+.margin-lg-r { margin-right: 40px; }
+.margin-xl-r { margin-right: 50px; }
+.margin-xxl-r { margin-right: 60px; }
+
+//外间距的下边距
+.margin-0-b { margin-bottom: 0; }
+.margin-xxs-b { margin-bottom: 5px; }
+.margin-xs-b { margin-bottom: 10px; }
+.marign-sm-b { margin-bottom: 20px; }
+.margin-md-b {margin-bottom: 30px; }
+.margin-lg-b { margin-bottom: 40px; }
+.margin-xl-b { margin-bottom: 50px; }
+.margin-xxl-b { margin-bottom: 60px; }
+
+//外间距的左边距
+.margin-0-l { margin-left: 0; }
+.margin-xxs-l { margin-left: 5px; }
+.margin-xs-l { margin-left: 10px; }
+.marigin-sm-l { margin-left: 20px; }
+.margin-md-l { margin-left: 30px; }
+.margin-lg-l { margin-left: 40px; }
+.margin-xl-l { margin-left: 50px; }
+.margin-xxl-l { margin-left: 60px; }
+
+
+/* Syntax highlighting for JSON objects */
+ul.json-dict, ol.json-array {
+  list-style-type: none;
+  margin: 0 0 0 1px;
+  border-left: 1px dotted #ccc;
+  padding-left: 2em;
+}
+ul.json-dict li,ol.json-array li{
+    line-height: 1.5;
+}
+.json-string {
+  color: #0B7500;
+}
+.json-literal {
+  color: #1A01CC;
+  font-weight: bold;
+}
+
+/* Toggle button */
+a.json-toggle {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+a.json-toggle:focus {
+  outline: none;
+}
+// a.json-toggle:before {
+//   color: #aaa;
+//   content: "\25BC"; /* down arrow */
+//   position: absolute;
+//   display: inline-block;
+//   width: 1em;
+//   left: -1em;
+// }
+a.json-toggle.collapsed:before {
+  transform: rotate(-90deg); /* Use rotated down arrow, prevents right arrow appearing smaller than down arrow in some browsers */
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+/* Collapsable placeholder links */
+a.json-placeholder {
+  color: #aaa;
+  padding: 0 1em;
+  text-decoration: none;
+}
+a.json-placeholder:hover {
+  text-decoration: underline;
+}
+
+// form表单
+.wrap-form{
+    font-size: 14px;
+    color:#333;
+}
+.wrap-form  .el-form-item{
+    margin-bottom:0px;
+}
+.wrap-form .el-form-item__label{
+    color:#333;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+}
+.wrap-form .el-form-item__content{
+    line-height: 32px;
+}
+
+//公共box
+.wrap-box{
+    position: relative;
+    padding: 48px 20px 20px;
+    background-color:#f7f8fa;
+    margin-bottom:30px;
+    border:1px solid #e1e6eb;
+}
+
+
+// 不含背景图的title（文章标签）
+.wrap-title{
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+    line-height: 24px;
+    background-color: #F5F5F5;
+    padding:20px;
+}
+// 标题下面的描述
+.wrap-title-dec{
+    font-size:12px;
+    font-weight:normal;
+    color:#666;
+}
+
+// 标题下面的描述
+.wrap-title-dec .icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    vertical-align: -5px;
+    background-image: url(../../static/images/common/style-index.d437fb5e.png);
+}
+
+// 标题下面的描述---时间
+.wrap-title-dec .icon-time{
+    background-position: -344px -147px;
+}
+
+// 标题下面的描述---作者
+.wrap-title-dec .icon-author{
+    background-position: -416px -147px;
+}
+
+// 标题下面的描述---分类
+.wrap-title-dec .icon-category{
+    background-position: -392px -147px;
+}
+
+
+
+// 含背景图的title
+.wrap-bg-title{
+    position:absolute;
+    left:-1px;
+    top:-6px;
+    color:#fff;
+    height: 35px;
+    line-height:35px;
+    min-width:145px;
+    text-align: center;
+    background:url(../../static/images/common/biaoti_bg.png) no-repeat;
+    background-size: cover;
+    z-index: 1;
+    padding:0 20px;
+    padding-left: 15px;
+}
+// 文本描述
+.wrap-text-decoration{
+    background-color:rgba(213, 109, 7, 0.22);
+    line-height:22px;
+    padding:10px;
+    margin-bottom:20px;
+
+}
+
+//特殊文字颜色
+.wrap-specialtext-color{
+   color:#e64c65;
+
+}
+
+// 字体
+ .icon-style {
+    width: 16px;
+    height: 16px;
+    vertical-align: -0.2em;
+    color: #666;
+    overflow: hidden;
+}

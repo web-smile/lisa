@@ -11,9 +11,14 @@ const routers = [
                 path: 'index',
                 component: resolve => require(['@/views/wechat/index.vue'], resolve),//懒加载,
                 name: 'wechat/index',
-                meta: { activeItem: '/wechat/index' }
+                meta: { _menuName: 'web前端-index',activeItem: '/wechat/index' }
             },
         ],
+        meta: {
+            _menuName: 'web前端',
+            group: '1',
+            alpha: true,
+        },
 
     },
 ];

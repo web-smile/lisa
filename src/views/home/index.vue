@@ -5,6 +5,11 @@
 </template>
 <script>
     export default {
-        name:'home'
+        name:'home',
+        created(){
+            console.log(this);
+            this.$store.commit('increment')
+            console.log('????',this.$store.state.count);
+        },
     }
 </script>

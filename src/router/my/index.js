@@ -11,9 +11,14 @@ const routers = [
                 path: 'index',
                 component: resolve => require(['@/views/my/index.vue'], resolve),//懒加载,
                 name: 'my/index',
-                meta: { activeItem: '/my/index' }
+                meta: { _menuName: '我的-index',activeItem: '/my/index' }
             },
         ],
+        meta: {
+            _menuName: '我的',
+            group: '1',
+            alpha: true,
+        },
 
     },
 ];

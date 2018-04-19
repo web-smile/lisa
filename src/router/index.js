@@ -11,11 +11,13 @@ export const constantRouterMap = [
         component: Layout,
         name: 'home',
         redirect: '/home',
+        meta: { _menuName: '错误页面' }
     },
     {
         path: '*',
         component: HelloWorld,
         name: '错误页面',
+        meta: { _menuName: '错误页面'}
     },
 ];
 
@@ -59,7 +61,7 @@ export const asyncRouterMap = [
     ...constantRouterMap
 ];
 
-console.log(asyncRouterMap);
+// console.log(asyncRouterMap);
 // export default new Router({
 //   routes: [
 //     {

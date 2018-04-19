@@ -1,25 +1,31 @@
 <template>
-    <!-- 左侧导航 -->
-	<div class="sidebar-wrapper">
-		<el-menu default-active="/home/index" class="el-menu-vertical-demo">
-			<el-menu-item  index="/home/index" :class="{'isActive': active}">
-                活动发布
-                <router-link to="/home/index"></router-link>
-            </el-menu-item>
-			<el-menu-item index="/about/index" :class="{'isActive': !active}">
-                活动管理
-            </el-menu-item>
-		</el-menu>
-	</div>
+    <el-menu mode="vertical" theme="default" :unique-opened="uniqueOpened" :default-active="$route.path">
+        <siderbar-item :routes='permission_routers'></siderbar-item>
+    </el-menu>
 </template>
 
 <script>
+    import {mapGetters} from 'vuex';
+    import SiderbarItem from './SiderbarItem';
     export default {
-      name: 'Sidebar',
-      data(){
-          return{
-              active:'true'
-          }
-      }
+        data() {
+            return {
+                uniqueOpened: true,
+            }
+        },
+        components: {SiderbarItem},
+        computed: {
+            ...mapGetters([
+                'permission_routers'
+            ])
+        }
     }
 </script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+    .el-menu {
+        min-height: 100%;
+        border:none;
+    }
+
+</style>
