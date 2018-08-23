@@ -185,13 +185,4 @@
             display: block;
         }
     }
-    .radio-grop-canvas {
-        width:608px;
-        background-color:#f5f5f5;
-        padding:50px;
-    }
-    .radio-grop-canvas .radio-grop-canvas-out {
-        padding:30px;
-        background-color:#fff;
-    }
 </style>

@@ -8,7 +8,7 @@
          <div class="clearfix">
             <tool class="fr"></tool>
         </div>
-        <div class="clearfix margin-xs-t">
+        <div class="certificate-box clearfix  margin-xs-t">
             <div class="fl radio-grop-box">
                 <el-radio-group v-model="activeRadio" class="radio-grop">
                     <el-radio :label="1">背景</el-radio>
@@ -24,6 +24,10 @@
                     <div class="radio-grop-canvas-set"></div>
                 </div>
             </div>
+        </div>
+        <div class="opera-btns">
+            <el-button >取消</el-button>
+            <el-button type="primary">保存证书</el-button>
         </div>
     </div>
 </template>
@@ -52,9 +56,13 @@
     }
 </script>
 <style lang="scss" rel="stylesheet/scss">
+    .certificate-box{
+        height:1000px;
+    }
     // 左侧 选项卡
     .radio-grop-box{
         width:54px;
+        height:100%;
         background-color:#fafafa;
         .radio-grop {
             width:100%;
@@ -64,17 +72,36 @@
             margin:0;
         }
     }
+
     .radio-grop-content {
         width:137px;
-        background-color:#f2f2f2;
-        margin-right:20px;
+        height:100%;
+        font-size:14px;
+        line-height:1.1;
         padding:10px;
         padding-top:0;
-        line-height:1.1;
+        margin-right:20px;
+        background-color:#f2f2f2;
         border-left:1px solid #ccc;
-        font-size:14px;
     }
 
+    .radio-grop-canvas {
+        width:calc(100% - 54px - 20px - 158px - 20px );
+        height:100%;
+        padding:44px;
+        box-sizing: border-box;
+        background-color:#f5f5f5;
+
+    }
+    .radio-grop-canvas .radio-grop-canvas-out {
+        height:595px;
+        background-color:#fff;
+    }
+
+    .opera-btns{
+        margin-top:20px;
+        text-align: right;
+    }
 </style>
 
 

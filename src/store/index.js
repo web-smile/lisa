@@ -5,18 +5,28 @@ import Vuex from "vuex";
 // import user from './modules/user';
 import permission from './modules/permission';
 import {storeGetter} from './modules/practice';
-import getters from './getters';
-
+import getters from './modules/getters';
+import editor from './vuex/index'
 Vue.use(Vuex);
 
+// const store = new Vuex.Store({
+//     modules: {
+//         // app,
+//         // user,
+//         permission,//路由
+//         storeGetter
+//     },
+//     getters,
+
+// });
 const store = new Vuex.Store({
-    modules: {
-        // app,
-        // user,
-        permission,//路由
-        storeGetter
+    modules:{
+        editor,
+        storeGetter,
+        permission,
     },
     getters,
+
 
 });
 export default store

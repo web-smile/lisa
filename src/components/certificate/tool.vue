@@ -6,28 +6,32 @@
 <template>
     <div class="tool">
         <!-- 字体 -->
-        <el-dropdown trigger="click">
-            <span class="el-dropdown-link">
-                字体<i class="el-icon-arrow-down el-icon--right"></i>
-            </span>
-            <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>微软雅黑</el-dropdown-item>
-                <el-dropdown-item>宋体</el-dropdown-item>
-                <el-dropdown-item>楷体</el-dropdown-item>
-            </el-dropdown-menu>
-        </el-dropdown>
+        <el-select v-model="cerFontFamily"
+            placeholder="字体"
+            slot="prepend"
+            @change="">
+            <el-option label="微软雅黑"
+                value="1"
+                default></el-option>
+            <el-option label="宋体"
+                value="2"></el-option>
+            <el-option label="楷体"
+                value="3"></el-option>
+        </el-select>
 
          <!-- 字符 -->
-        <el-dropdown trigger="click">
-            <span class="el-dropdown-link">
-                字符<i class="el-icon-arrow-down el-icon--right"></i>
-            </span>
-            <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>12</el-dropdown-item>
-                <el-dropdown-item>14</el-dropdown-item>
-                <el-dropdown-item>16</el-dropdown-item>
-            </el-dropdown-menu>
-        </el-dropdown>
+        <el-select v-model="cerFontSize"
+            placeholder="字符"
+            slot="prepend"
+            @change="">
+            <el-option label="12"
+                value="1"
+                default></el-option>
+            <el-option label="14"
+                value="2"></el-option>
+            <el-option label="16"
+                value="3"></el-option>
+        </el-select>
 
         <ul class="text-style clearfix">
             <li class="bold" title="加粗"></li>
@@ -39,16 +43,20 @@
         </ul>
 
         <!-- 行间距 -->
-        <el-dropdown trigger="click">
-            <span class="el-dropdown-link">
-                行间距<i class="el-icon-arrow-down el-icon--right"></i>
-            </span>
-            <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>12</el-dropdown-item>
-                <el-dropdown-item>14</el-dropdown-item>
-                <el-dropdown-item>16</el-dropdown-item>
-            </el-dropdown-menu>
-        </el-dropdown>
+        <el-select v-model="cerSpace"
+            placeholder="行间距"
+            slot="prepend"
+            @change="">
+            <el-option label="12"
+                value="1"
+                default></el-option>
+            <el-option label="14"
+                value="2"></el-option>
+            <el-option label="16"
+                value="3"></el-option>
+        </el-select>
+
+        <!-- 预览 -->
         <span class="preview"></span>
     </div>
 </template>
@@ -57,7 +65,9 @@
         name:'tool',
         data() {
             return {
-
+                cerFontFamily:'',//字体
+                cerFontSize:'',//字号。
+                cerSpace:'',//行间距
             }
         },
         created(){
@@ -69,12 +79,13 @@
     }
 </script>
 <style lang="scss" rel="stylesheet/scss">
-    .tool .el-dropdown{
-        cursor: pointer;
-        margin-right:20px;
+    .tool .el-select{
+        width:110px;
+        margin-left:20px;
     }
     .tool .text-style{
         display:inline-block;
+        vertical-align: middle;
     }
     .tool .text-style li{
         float:left;
