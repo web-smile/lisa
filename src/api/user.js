@@ -13,6 +13,6 @@ const logout = () => {
 // module.exports = {
 //   login, register, logout
 // }
-export  {
+export default {
   login, register, logout
 }

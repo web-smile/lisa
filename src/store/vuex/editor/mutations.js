@@ -125,21 +125,21 @@ const mutations = {
   [types.CLEAN_PIC_LIST] (state) {
     state.picList = []
   },
-  [types.SORTELEMENTS] (state, data) {
-    let element = state.editorPage.elements[data.start]
-    let end = parseInt(data.end)
-    if (end !== -1) {
-      state.editorPage.elements.splice(data.start, 1)
-      if (end >= state.editorPage.elements.length) {
-        state.editorPage.elements.push(element)
-      } else {
-        state.editorPage.elements.splice(end, 0, element)
-      }
-      state.editorPage.elements.map((value, index, arr) => {
-        value.zindex = index + 1
-      })
-    }
-  },
+//   [types.SORTELEMENTS] (state, data) {
+//     let element = state.editorPage.elements[data.start]
+//     let end = parseInt(data.end)
+//     if (end !== -1) {
+//       state.editorPage.elements.splice(data.start, 1)
+//       if (end >= state.editorPage.elements.length) {
+//         state.editorPage.elements.push(element)
+//       } else {
+//         state.editorPage.elements.splice(end, 0, element)
+//       }
+//       state.editorPage.elements.map((value, index, arr) => {
+//         value.zindex = index + 1
+//       })
+//     }
+//   },
   [types.DELETE_THEME] (state, data) {
     state.themeList.findIndex((value, index, arr) => {
       if (value === data) {

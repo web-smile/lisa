@@ -48,13 +48,7 @@ const routers = [
                 name: 'skillTree',
                 meta: { _menuName: 'tree', activeItem: '/skill/index' }
             },
-            /*canvas画板*/
-            {
-                path: 'canvas',
-                component: resolve => require(['@/views/skill/canvas.vue'], resolve),//懒加载,
-                name: 'skillCanvas',
-                meta: { _menuName: 'canvas', activeItem: '/skill/index' }
-            },
+            
             /*将js函数变成vue的函数*/
             {
                 path: 'jsonViewer',
@@ -69,20 +63,15 @@ const routers = [
                 name: 'errorDemo',
                 meta: { _menuName: 'errorDemo', activeItem: '/skill/index' }
             },
-            /*制作证书*/
+            /*错误提示*/
             {
-                path: 'MakeCertificate',
-                component: resolve => require(['@/views/skill/makeCertificate.vue'], resolve),//懒加载,
-                name: 'MakeCertificate',
-                meta: { _menuName: '制作证书', activeItem: '/skill/index' }
+                path: 'elementDemo',
+                component: resolve => require(['@/views/skill/elementDemo.vue'], resolve),//懒加载,
+                name: 'elementDemo',
+                meta: { _menuName: 'elementDemo', activeItem: '/skill/index' }
             },
-            /*h5editor*/
-            {
-                path: 'h5editor',
-                component: resolve => require(['@/views/skill/themeList.vue'], resolve),//懒加载,
-                name: 'h5editor',
-                meta: { _menuName: 'h5editor', activeItem: '/skill/index' }
-            },
+         
+
 
         ],
         meta: {

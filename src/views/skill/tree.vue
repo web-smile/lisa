@@ -57,8 +57,12 @@
         created(){
             this.loadData();
             this.getQuoteType();
+
         },
         methods: {
+            selectAA(){
+                this.selectKey
+            },
             /**
              * des:搜索的回车事件
              */

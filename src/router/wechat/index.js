@@ -11,11 +11,11 @@ const routers = [
                 path: 'index',
                 component: resolve => require(['@/views/wechat/index.vue'], resolve),//懒加载,
                 name: 'wechat/index',
-                meta: { _menuName: 'web前端-index',activeItem: '/wechat/index' }
+                meta: { _menuName: '移动端前端-index',activeItem: '/wechat/index' }
             },
         ],
         meta: {
-            _menuName: 'web前端',
+            _menuName: '移动端前端',
             group: '1',
             alpha: true,
         },
