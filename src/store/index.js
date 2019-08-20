@@ -30,5 +30,5 @@ const store = new Vuex.Store({
 
 
 });
-// const store = new Vuex.Store(editor);
+// const store = new Vuex.Store(editor)
 export default store

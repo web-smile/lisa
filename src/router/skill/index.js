@@ -48,7 +48,7 @@ const routers = [
                 name: 'skillTree',
                 meta: { _menuName: 'tree', activeItem: '/skill/index' }
             },
-            
+         
             /*将js函数变成vue的函数*/
             {
                 path: 'jsonViewer',
@@ -63,14 +63,7 @@ const routers = [
                 name: 'errorDemo',
                 meta: { _menuName: 'errorDemo', activeItem: '/skill/index' }
             },
-            /*错误提示*/
-            {
-                path: 'elementDemo',
-                component: resolve => require(['@/views/skill/elementDemo.vue'], resolve),//懒加载,
-                name: 'elementDemo',
-                meta: { _menuName: 'elementDemo', activeItem: '/skill/index' }
-            },
-         
+     
 
 
         ],

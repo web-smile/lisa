@@ -21,7 +21,7 @@ Vue.use(ElementUI);
 
 Vue.component('icon-svg', IconSvg)
 
-new Vue({
+ new Vue({
     router,
     store,
     template: '<App/>',
